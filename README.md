@@ -21,6 +21,8 @@
 
 ## 🖥 사이트 전체 흐름도
 
+[업무흐름도.drawio.pdf](https://github.com/KDevelGen/FinalProject/files/8768390/drawio.pdf)
+
 ## 💻 사용 패키지(라이브러리)
 
 
