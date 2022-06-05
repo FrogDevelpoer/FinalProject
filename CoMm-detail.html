@@ -135,7 +135,6 @@
             line-height: 26px;
             word-break: break-all;
             display: block;
-            border: 1px solid #5c667b;
         }
         .CoMm-dt-tag{
             padding-bottom: 32px;
@@ -220,19 +219,50 @@
             border-bottom: 1px solid #edeef0;
         }
         .CoMm-rep-btn{
-            border: 1px solid red;
             float: right;
             box-sizing: border-box;
         }
-        .CoMm-rep-col{
-            box-sizing: border-box;
-            border: 1px solid black;
+        .CoMm-rep-list{
+            border-top: 1px solid #d7dce5;
+            list-style: none;
         }
-        .CoMm-rep-lis{
-            border: 1px solid blue;
-            height: 480px;
-            margin-top: 20px;
+        .CoMm-rep-list li{
+            position: relative;
+            border-bottom: 1px solid #deddf0;
         }
+        .CoMm-rep-wrap{
+            position: relative;
+            background: #fff;
+        }
+        .CoMm-rep-com{
+            display: block;
+            color: #373f57;
+            font: 14px;
+            letter-spacing: -1px;
+            line-height: 24px;
+            text-align: left;
+        }
+        .CoMm-rep-view{
+            padding: 24px 16px;
+        }
+        .CoMm-rep-del{
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 24px;
+            border-radius: 4px;
+            border: none;
+            background-color: #4876ef;
+            color: #d7dce5;
+        }
+        .CoMm-rep-id{
+            display: block;
+            font-size: 14px;
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -287,69 +317,47 @@
 
                 <button type = "button" class = "CoMm-rep-sub">댓글 등록</button>
             </div>
-
-            
         </form>
 
-        <div class = "CoMm-rep-lis">
-            <ul class = "CoMm-rep-ul">
-                <li> 
-                    <div class = "CoMm-rep-col">
-                        <div class = "CoMm-rep-con">
-                            댓글1
-                        </div>
-                        <div class = "CoMm-rep-btn">
-                            <button type = "button" class = "CoMm-rep-edt">수정</button>
-                            <button type = "button" class = "CoMm-rep-dlt">삭제</button>
-                        </div>
+        <ul class = "CoMm-rep-list">
+            <li>
+                <div class = "CoMm-rep-wrap">
+                    <div class = "CoMm-rep-view">
+                        <span class = "CoMm-rep-com">댓글입니다.</span>
                     </div>
-                </li>
-                <li> 
-                    <div class = "CoMm-rep-col">
-                        <div class = "CoMm-rep-con">
-                            댓글1
-                        </div>
-                        <div class = "CoMm-rep-btn">
-                            <button type = "button" class = "CoMm-rep-edt">수정</button>
-                            <button type = "button" class = "CoMm-rep-dlt">삭제</button>
-                        </div>
+                </div>
+                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
+                <button class = "CoMm-rep-del" type = "button">삭제</button>
+            </li>
+            <li>
+                <div class = "CoMm-rep-wrap">
+                    <div class = "CoMm-rep-view">
+                        <span class = "CoMm-rep-com">댓글입니다.</span>
                     </div>
-                </li>
-                <li> 
-                    <div class = "CoMm-rep-col">
-                        <div class = "CoMm-rep-con">
-                            댓글1
-                        </div>
-                        <div class = "CoMm-rep-btn">
-                            <button type = "button" class = "CoMm-rep-edt">수정</button>
-                            <button type = "button" class = "CoMm-rep-dlt">삭제</button>
-                        </div>
+                </div>
+                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
+                <button class = "CoMm-rep-del" type = "button">삭제</button>
+            </li>
+            <li>
+                <div class = "CoMm-rep-wrap">
+                    <div class = "CoMm-rep-view">
+                        <span class = "CoMm-rep-com">댓글입니다.</span>
                     </div>
-                </li>
-                <li> 
-                    <div class = "CoMm-rep-col">
-                        <div class = "CoMm-rep-con">
-                            댓글1
-                        </div>
-                        <div class = "CoMm-rep-btn">
-                            <button type = "button" class = "CoMm-rep-edt">수정</button>
-                            <button type = "button" class = "CoMm-rep-dlt">삭제</button>
-                        </div>
+                </div>
+                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
+                <button class = "CoMm-rep-del" type = "button">삭제</button>
+            </li>
+            <li>
+                <div class = "CoMm-rep-wrap">
+                    <div class = "CoMm-rep-view">
+                        <span class = "CoMm-rep-com">댓글입니다.</span>
                     </div>
-                </li>
-                <li> 
-                    <div class = "CoMm-rep-col">
-                        <div class = "CoMm-rep-con">
-                            댓글1
-                        </div>
-                        <div class = "CoMm-rep-btn">
-                            <button type = "button" class = "CoMm-rep-edt">수정</button>
-                            <button type = "button" class = "CoMm-rep-dlt">삭제</button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                </div>
+                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
+                <button class = "CoMm-rep-del" type = "button">삭제</button>
+            </li>
+        </ul>
+        
     </div>
 </body>
 </html>
