@@ -76,11 +76,13 @@
             display: inline-block;
             position: relative;
             width: 112px;      
-            text-align: right;      
+            text-align: right;   
+            float: right;   
         }
         .CoMm-pos-inf{
             position: relative;
             margin-top: 22px;
+            width: 142px;
             height: 90px;
         }
         
@@ -94,7 +96,7 @@
             color: #444;
             text-decoration: none;
         }
-        .CoMm-wr-dt{
+        /* .CoMm-wr-dt{
             display: inline-block;
             position: absolute;
             top: 28px;
@@ -104,23 +106,29 @@
             letter-spacing: -0.5px;
             line-height: 16px;
             box-sizing: border-box;
-        }
-        .CoMm-mem-id{
+            width: 120px;
+            margin-left: 50px;
+            box-sizing: border-box;
+            text-align: center;
+        } */
+        /* .CoMm-mem-id{
             margin: 2px 0 0 1px;
             color: #373f57;
             font-size: 14px;
             letter-spacing: -0.44px;
             line-height: 24px;
-            /* min-width: 30px; */
             width: 80px;
             margin-top: 15px;
             box-sizing: border-box;
+        } */
+        .CoMm-mem-id{
+            width: 500px;
         }
-       
-        .CoMm-wr-dt{
-            width: 120px;
+        .CoMm-mem-id span{
             margin-left: 50px;
-            box-sizing: border-box;
+        }
+        .CoMm-mem-id a{
+            text-decoration: none;
             text-align: center;
         }
         .CoMm-mem-pic img{
@@ -135,6 +143,7 @@
             line-height: 26px;
             word-break: break-all;
             display: block;
+            border: 1px solid #5c667b;
         }
         .CoMm-dt-tag{
             padding-bottom: 32px;
@@ -213,6 +222,7 @@
         .CoMm-rep-ul{
             border-top: 1px solid #d7dce5;
             list-style: none;
+            margin-top: 30px;
         }
         .CoMm-rep-ul li{
             position: relative;
@@ -221,48 +231,79 @@
         .CoMm-rep-btn{
             float: right;
             box-sizing: border-box;
+            width: 138px;
+            display: flex;
         }
-        .CoMm-rep-list{
-            border-top: 1px solid #d7dce5;
-            list-style: none;
+        .SeCe-rep-wrap{
+            border: 1px solid black;
+            height: 500px;
+            box-sizing: border-box;
         }
-        .CoMm-rep-list li{
-            position: relative;
-            border-bottom: 1px solid #deddf0;
+        .SeCe-rep-ob{
+            border: 1px solid black;
+            height: 320px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #373f57;
         }
-        .CoMm-rep-wrap{
-            position: relative;
-            background: #fff;
-        }
-        .CoMm-rep-com{
-            display: block;
-            color: #373f57;
-            font: 14px;
-            letter-spacing: -1px;
-            line-height: 24px;
-            text-align: left;
-        }
-        .CoMm-rep-view{
-            padding: 24px 16px;
-        }
-        .CoMm-rep-del{
-            display: block;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 60px;
-            height: 24px;
-            border-radius: 4px;
-            border: none;
-            background-color: #4876ef;
-            color: #d7dce5;
+        .CoMm-rep-con{
+            font-size: 18px;
         }
         .CoMm-rep-id{
-            display: block;
             font-size: 14px;
         }
-        
-        
+        .CoMm-btn-edt{
+            width: 58px;
+            height: 33px;
+            float: right;
+            border-radius: 4px;
+            border-color: #4876ef;
+            background-color: #4876ef;
+            box-shadow: none;
+            color: #fff;
+            cursor: pointer;
+
+        }
+        .CoMm-btn-del{
+            width: 58px;
+            height: 33px;
+            float: right;
+            border-radius: 4px;
+            border-color: #4876ef;
+            background-color: #4876ef;
+            box-shadow: none;
+            color: #fff;
+            cursor: pointer;
+
+        }
+        .CoMm-rep-ob{
+            list-style: none;
+        }
+        #CoMm-rep-p1{
+            font-size: 26px;
+        }
+        #CoMm-rep-p2{
+            width: 1000px;
+            float: left;
+        }
+        .CoMm-rep-list{
+            border-bottom: 1px solid #5c667b;
+        }
+        .CoMm-rep-edt{
+            border: 1px solid #4876ef;
+            box-sizing: border-box;
+            background-color: #4876ef;
+            width: 64px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        .CoMm-rep-del{
+            border: 1px solid #4876ef;
+            box-sizing: border-box;
+            background-color: #4876ef;
+            width: 64px;
+            height: 30px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -286,8 +327,8 @@
             <div class = "CoMm-pos-inf">
                 <div class ="CoMm-mem-pic">
                         <img src = "" alt="프로필사진">
-                        <span class = "CoMm-mem-id">ID</span>
-                    <span class = "CoMm-wr-dt">작성 날짜</span>
+                        <p class = "CoMm-mem-id"><a href="#">ID</a>
+                            <span class = "CoMm-wr-dt"><a href="#">작성 날짜</a></span></p>
                 </div>
             </div>
             
@@ -314,50 +355,27 @@
                         <em>0</em>/1000자
                     </span>
                 </div>
-
                 <button type = "button" class = "CoMm-rep-sub">댓글 등록</button>
             </div>
         </form>
 
-        <ul class = "CoMm-rep-list">
-            <li>
-                <div class = "CoMm-rep-wrap">
-                    <div class = "CoMm-rep-view">
-                        <span class = "CoMm-rep-com">댓글입니다.</span>
-                    </div>
-                </div>
-                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
-                <button class = "CoMm-rep-del" type = "button">삭제</button>
-            </li>
-            <li>
-                <div class = "CoMm-rep-wrap">
-                    <div class = "CoMm-rep-view">
-                        <span class = "CoMm-rep-com">댓글입니다.</span>
-                    </div>
-                </div>
-                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
-                <button class = "CoMm-rep-del" type = "button">삭제</button>
-            </li>
-            <li>
-                <div class = "CoMm-rep-wrap">
-                    <div class = "CoMm-rep-view">
-                        <span class = "CoMm-rep-com">댓글입니다.</span>
-                    </div>
-                </div>
-                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
-                <button class = "CoMm-rep-del" type = "button">삭제</button>
-            </li>
-            <li>
-                <div class = "CoMm-rep-wrap">
-                    <div class = "CoMm-rep-view">
-                        <span class = "CoMm-rep-com">댓글입니다.</span>
-                    </div>
-                </div>
-                <p class = "CoMm-rep-id">댓글 작성자 ID</p>
-                <button class = "CoMm-rep-del" type = "button">삭제</button>
-            </li>
-        </ul>
-        
+        <div class = "CoMm-rep-wrap">
+            <ol class = "CoMm-rep-ob">
+                <li class = "CoMm-rep-list">
+                    <p id = "CoMm-rep-p1">
+                        댓글입니다.
+                    </p>
+                    <input type = "button" class = "CoMm-rep-edt" value = "수정">
+                    <input type = "button" class = "CoMm-rep-del" value = "삭제">
+                    <p id = "CoMm-rep-p2">
+                        댓글 작성자ID
+                    </p>
+                    <p id = "CoMm-rep-p3">
+                        댓글 작성 날짜
+                    </p>
+                </li>
+            </ol>
+        </div>
     </div>
 </body>
 </html>
