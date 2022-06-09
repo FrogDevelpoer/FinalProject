@@ -304,7 +304,134 @@
             height: 30px;
             border-radius: 5px;
         }
+        .CoMm-btn-sg{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .CoMm-sg-con{
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px 10px;
+            background-color: #fff;
+            border: 2px solid #666;
+        }
+        .CoMm-sg-lay {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0, 0, 0, 0.5);
+            z-index:-1;
+        }   
+        .CoMm-sg-head > strong{
+            display: block;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444;
+            color: #000;
+            font-weight: normal;
+            letter-spacing: -3px;
+            line-height: 32px;
+        }
+        .CoMm-sg-list{
+            padding-top: 6px;
+            list-style: none;
+        }
+        .CoMm-sg-list > li{
+            margin-top: 24px;
+        }
+
+        .CoMm-btn-sg{
+            overflow-y: auto;
+            position: fixed;
+            top: 80px;
+            bottom: 50px;
+            left: 50%;
+            z-index: 1200;
+            margin-left: -260px;
+            padding: 50px;
+            width: 520px;
+            max-height: 691px;
+            border: 1px solid #444;
+            box-sizing: border-box;
+            letter-spacing: -1px;
+            background: #fff;
+            box-shadow: 0 0 4px 2px rgb(0 0 0 / 10%);
+        }
+        .CoMm-sg-lbl{
+            padding-left: 32px;
+            color: #444;
+            font-size: 16px;
+            height: 24px;
+            line-height: 17px;
+            user-select: none;
+            box-sizing: border-box;
+            letter-spacing: -1px;
+        }
+        .CoMm-rep-ta{
+            overflow-y: auto;
+            margin-top: 20px;
+            padding: 10px 122px;
+            width: 422px;
+            height: 95px;
+            border: 1px solid #dbdbdb;
+            box-sizing: border-box;
+            color: #444;
+            font-size: 14px;
+            letter-spacing: -1px;
+            line-height: 18px;
+            resize: none;
+        }
+        .CoMm-rp-btn{
+            display: block;
+            margin: 30px auto 0;
+            padding: 10px 0 13px;
+            width: 170px;
+            height: 50px;
+            border-radius: 2px;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: -1px;
+            background-color: #4876ef;
+            float: left;
+            cursor: pointer;
+            border: none;
+        }
+        .CoMm-cl-btn{
+            display: block;
+            margin: 30px auto 0;
+            padding: 10px 0 13px;
+            width: 170px;
+            height: 50px;
+            border-radius: 2px;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: -1px;
+            background-color: #353535;
+            float: right;
+            cursor: pointer;
+            border: none;
+        }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+       
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".CoMm-btn-div").click(function(){
+                $(".CoMm-btn-sg").attr("style", "display : block");
+            });
+            $(".CoMm-btn-div").click(function(){
+                $(".CoMm-btn-sg").attr("style", "display : none");
+            });
+        });
+        </script>
 </head>
 <body>
     <div class = "head"></div>
@@ -320,6 +447,67 @@
                 <h1>게시글 제목</h1>
                 <div class = "CoMm-btn-div">
                     <button type = "button" class = "CoMm-con-btn">신고하기</button>
+                </div>
+                <div class = "CoMm-btn-sg">
+                    <form class = "CoMm-sg-rep">
+                        <input type = "hidden" name = "id"> <!-- 신고당한 회원 ID -->
+                        <input type = "hidden" name = "content_num"> <!-- 신고한 게시글 번호 -->
+
+                        <div class = "CoMm-sg-head">
+                            <strong>신고하기</strong>
+                            
+                        </div>
+                        <div>
+                            <ul class = "CoMm-sg-list">
+                                <li>
+                                    <span class = "CoMm-sg-ir">
+                                        <input type = "radio" name = "report" id = "report1" value = "slander">
+                                        <label class = "CoMm-sg-lbl" for="report1">비방/욕설</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class = "CoMm-sg-ir">
+                                        <input type = "radio" name = "report" id = "report2" value = "slander">
+                                        <label class = "CoMm-sg-lbl" for="report2">허위사실</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class = "CoMm-sg-ir">
+                                        <input type = "radio" name = "report" id = "report3" value = "slander">
+                                        <label class = "CoMm-sg-lbl" for="report3">개인정보노출</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class = "CoMm-sg-ir">
+                                        <input type = "radio" name = "report" id = "report4" value = "slander">
+                                        <label class = "CoMm-sg-lbl" for="report4">음란성</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class = "CoMm-sg-ir">
+                                        <input type = "radio" name = "report" id = "report5" value = "slander">
+                                        <label class = "CoMm-sg-lbl" for="report5">게시글 도배</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class = "CoMm-sg-ir">
+                                        <input type = "radio" name = "report" id = "report6" value = "slander">
+                                        <label class = "CoMm-sg-lbl" for="report6">부적절한 홍보</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class = "CoMm-sg-ir">
+                                        <input type = "radio" name = "report" id = "report7" value = "slander">
+                                        <label class = "CoMm-sg-lbl" for="report7">기타</label>
+                                    </span>
+                                </li>
+                            </ul>
+                            <textarea name = "CoMm-rep-con" id = "CoMm-rep-con" class = "CoMm-rep-ta" rows = "24" cols = "8" placeholder="내용을 입력하세요." title="신고내용 입력"></textarea>
+                            <button class = "CoMm-rp-btn">신고접수</button>
+                            <button class = "CoMm-cl-btn">닫기</button>
+                        </div>
+                    </form>
+                    <div class = "CoMm-sg-lay"></div>
                 </div>
             </div>
 
