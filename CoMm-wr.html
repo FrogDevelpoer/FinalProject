@@ -63,6 +63,17 @@
             color: #5c667b;
             font-size: 14px;
         }
+        .CoMm-cg-wrap select{
+            height: 42px;
+            margin-left: 38px; 
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .CoMm-cg-wrap select:hover{
+            border: 1px solid #4876ef;
+            border-radius: 4px;
+        }
         .CoMm-wr-con{
             width: 1280px;
             box-sizing: border-box;
@@ -78,6 +89,7 @@
             letter-spacing: -1px;
             line-height: 22px;
             width: 1280px;
+            box-sizing: border-box;
         }
         .CoMm-wr-pos{
             position: relative;
@@ -201,14 +213,14 @@
     <div class = "CoMm-wr-wrap">
         <div class = "CoMm-wr-head">
             <span class = "CoMm-wr-span">카테고리</span>
-            <div class = "CoMm-ul-wrap">
-                <button class= "CoMm-cat-btn">함께해요</button>
-                <ul class = "CoMm-ul-cat">
-                    <li><a href = "">함께해요</a></li>
-                    <li><a href = "">공유</a></li>
-                    <li><a href = "">자랑</a></li>
-                    <li><a href = "">나눠요</a></li>
-                </ul>
+            <div class = "CoMm-cg-wrap">
+                <select>
+                    <option value = "-">-- 카테고리를 선택하세요. --</option>
+                    <option value = "info">정보공유</option>
+                    <option value = "with">함께해요</option>
+                    <option value = "share">나눠요</option>
+                    <option value = "boast">자랑</option>
+                </select>
             </div>
 
         </div>
