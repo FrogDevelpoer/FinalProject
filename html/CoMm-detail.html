@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/CoMm-detail.css" type = "text/css">
+</head>
+<body>
+    <div class = "head"></div>
+    <div class = "CoMm-dt-wrap">
+        <div class = "CoMm-dt-head">
+                <a href = "">👁‍🗨&nbsp;전체 게시글</a>
+        </div>
+
+        <!--게시글 보기-->
+        <div class = "CoMm-pos-wrap">
+            <!--게시글 상단-->
+            <div class = "CoMm-bd1-top">
+                <h1>게시글 제목</h1>
+                <div class = "CoMm-btn-div">
+                    <button type = "button" class = "CoMm-con-btn">신고하기</button>
+                </div>
+            </div>
+
+            <!--게시글 정보-->
+            <div class = "CoMm-pos-inf">
+                <div class ="CoMm-mem-pic">
+                        <img src = "" alt="프로필사진">
+                        <p class = "CoMm-mem-id"><a href="#">ID</a>
+                            <span class = "CoMm-wr-dt"><a href="#">작성 날짜</a></span></p>
+                </div>
+            </div>
+            
+            <!--게시글 본문-->
+            <div class = "CoMm-dt-con">
+                게시글 본문~~~
+            </div>
+
+            <!--게시글 태그(글쓰기의 태그 내용)-->
+            <div class = "CoMm-dt-tag">
+                <a href = "">태그1</a>
+                <a href = "">태그2</a>
+                <a href = "">태그3</a>
+            </div>
+        </div>
+
+        <form class = "CoMm-rep-form" enctype="multipart/form-data">
+            <div class = "CoMm-rep-are">
+                <span class = "CoMm-use-id">유저 아이디</span>
+                <textarea placeholder="폭언, 욕설, 비방은 정지 사유입니다." rows="24" cols="80"></textarea>
+                
+                <div class = "CoMm-rep-wra">
+                    <span class = "CoMm-rep-cnt">
+                        <em>0</em>/1000자
+                    </span>
+                </div>
+                <button type = "button" class = "CoMm-rep-sub">댓글 등록</button>
+            </div>
+        </form>
+
+        <div class = "CoMm-rep-wrap">
+            <ol class = "CoMm-rep-ob">
+                <li class = "CoMm-rep-list">
+                    <p id = "CoMm-rep-p1">
+                        댓글입니다.
+                    </p>
+                    <input type = "button" class = "CoMm-rep-edt" value = "수정">
+                    <input type = "button" class = "CoMm-rep-del" value = "삭제">
+                    <p id = "CoMm-rep-p2">
+                        댓글 작성자ID
+                    </p>
+                    <p id = "CoMm-rep-p3">
+                        댓글 작성 날짜
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
