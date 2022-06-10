@@ -6,10 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="chatbot.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // $(".cb-open").click(function(){
+        //     $(".cb-div-wrap").show();
+        // });
+        // $("#cb-btn-can").click(function(){
+        //     $(".cb-div-wrap").hide();
+        // });
+        $(".cb-open").click(function(){
+            $(".cb-div-wrap").slideToggle();
+        })
+        $("#cb-btn-can").click(function(){
+            $(".cb-div-wrap").slideToggle();
+        })
+    });
+</script>
 </head>
 <body>
+    <button class = "cb-open">챗봇열기</button>
     <div class = "cb-div-wrap">
-        <div id = "cb-div-head">EZHome 챗봇</div>
+        <div id = "cb-div-head">
+            EZHome 챗봇
+            <span>
+                <button id = "cb-btn-can" type = "reset">닫기</button>
+            </span>
+        </div>
         <h2>~~~님 반갑습니다.<br>무엇을 도와드릴까요?</h2>
         <div class = "cb-div-cl">
             <div class = "cb-div-amsh">
