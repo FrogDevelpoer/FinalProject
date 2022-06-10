@@ -298,7 +298,7 @@
     border-radius: 5px;
 }
 .sg-wd-wrap{
-    display: block;
+    display: none;
     overflow-y: hidden;
     position: fixed;
     top: 80px;
