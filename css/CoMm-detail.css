@@ -52,7 +52,7 @@
     line-height: 28px;
 }
 .CoMm-con-btn{
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: 6px;
     padding: 0 11px;
     box-sizing: border-box;
@@ -65,10 +65,12 @@
     cursor: pointer;
 }
 .CoMm-btn-div{
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     width: 112px;      
     text-align: right;   
+    float: right;
+
 }
 .CoMm-pos-inf{
     position: relative;
@@ -226,7 +228,7 @@
     width: 138px;
     display: flex;
 }
-.SeCe-rep-wrap{
+/* .SeCe-rep-wrap{
     border: 1px solid black;
     height: 500px;
     box-sizing: border-box;
@@ -236,7 +238,7 @@
     height: 320px;
     box-sizing: border-box;
     border-bottom: 1px solid #373f57;
-}
+} */
 .CoMm-rep-con{
     font-size: 18px;
 }
@@ -314,15 +316,22 @@
     background-color: #fff;
     box-shadow: 0 0 4px 2px rgb(0 0 0 / 10%);
 }
+.sg-head{
+    border-bottom: 1px solid #444;
+}
 .sg-head strong{
     display: block;
     padding-bottom: 15px;
-    border-bottom: 1px solid #444;
     color: #000;
     font-size: 28px;
     font-weight: normal;
     letter-spacing: -3px;
     line-height: 32px;
+    width: 200px;
+}
+.sg-wd-cl{
+    display: block;
+    float: right;
 }
 .sg-rp-list{
     padding-top: 6px;
