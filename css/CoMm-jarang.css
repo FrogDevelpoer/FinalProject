@@ -99,9 +99,9 @@
     border-radius: 4px;
     box-sizing: border-box;
     vertical-align: top;
-    width: 240px;
     margin: auto;
     display: inline-block;
+    width: 279px;
 }
 .CoMm-chk-area input{
     top: 0;
@@ -188,4 +188,14 @@
     display: block;
     margin-top: 30px;
     float: right;
+}
+.CoMm-wr-btn a{
+    text-decoration: none;
+    color: #fff;
+}
+.CoMm-lbl{
+    cursor: pointer;
+}
+.color-change{
+    color: #4876EF;
 }
