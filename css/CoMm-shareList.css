@@ -99,7 +99,7 @@
     border-radius: 4px;
     box-sizing: border-box;
     vertical-align: top;
-    width: 240px;
+    width: 279px;
     margin: auto;
     display: inline-block;
 }
@@ -192,4 +192,7 @@
 .CoMm-wr-btn a{
     text-decoration: none;
     color: #fff;
+}
+.CoMm-lbl{
+    cursor: pointer;
 }
