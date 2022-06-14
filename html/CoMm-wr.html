@@ -6,6 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/CoMm-wr.css" type = "text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var tag = {};
+            var counter = 0;
+
+            // 태그 추가 함수
+            function addTag(value){
+                tag[counter] = value;   // 태그를 Object 안에 추가
+                counter++;  // counter 증가 삭제를 위한 del-btn의 고유 id가 됨
+            }
+            // 최종적으로 서버에서 넘길때 tag에 있는 값을 array type으로 만들어줌
+            function marginTag(){
+                return Object.values(tag).filter(function(word){
+                    return word !== "";
+                });
+            }
+            $("#tag").on("keyup", function(e){
+                var self = $(this);
+                console.log("keypress");
+
+                // input에 focus시 엔터 및 스페이스 입력 구동
+                if(e.key === "Enter" || e.keyCode == 32){
+                    var tagValue = self.val();  // 값 가져오기
+
+                    // 값이 없으면 동작하지 않음
+                    if(tagValue !== ""){
+                        // 같은 태그가 있는지 검사 후 있다면 해당 값이 array로 return
+                        var result = Object.values(tag).filter(function(word){
+                            return word === tagValue;
+                        });
+
+                        // 태그 중복 검사
+                        if(result.length == 0){
+                            $(".CoMm-tag-list").append("<li class='tag-item CoMm-tag'>" + tagValue + "<span class='del-btn' idx='" + counter + "'>x</span></li>");
+                            addTag(tagValue);
+                            self.val("");
+                        }else{
+                            alert("태그 값이 중복됩니다.");
+                        }
+                    }
+                    e.preventDefault(); // spaceBar시 빈 공간이 생기지 않도록 방지
+                }
+            });
+            // 삭제 버튼
+            // 비동기적 생성이므로 document 최초 생성 시가 아닌 검색을 통해 이벤트 구현
+            $(document).on("click", ".del-btn", function (e) {
+                var index = $(this).attr("idx");
+                tag[index] = "";
+                $(this).parent().remove();
+            });
+        });
+    </script>
 </head>
 <body>
     <div class = "head"></div>
@@ -50,11 +103,11 @@
                 <div class = "CoMm-tag-in">
                     <ul class = "CoMm-tag-list">
                         <li class = "CoMm-tag-itm">
-                            <div class = "CoMm-tag">소통</div>
+                            <!-- <div class = "CoMm-tag">소통</div> -->
                         </li>
                     </ul>
                     <div class= "CoMm-inp-tag">
-                        <input type = "text" placeholder="입력(최대 5개)" style="width: 95px;" maxlength="30">
+                        <input type = "text" placeholder="해시태그!" style="width: 95px;" maxlength="30" id = "tag">
                     </div>
                 </div>
             </div>

@@ -198,3 +198,14 @@ head{
     border-radius: 2px;
     box-shadow: none;
 }
+/* .tag-item:hover {
+    background-color: #262626;
+    color: #fff;
+  } */
+  
+  .del-btn {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+  }
